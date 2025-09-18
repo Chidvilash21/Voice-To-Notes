@@ -1,0 +1,110 @@
+body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #6dd5fa, #b16f05);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    h1 {
+      margin-top: 2rem;
+      font-size: 2.5rem;
+      font-weight: bold;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+    }
+
+    #wrapper {
+      margin-top: 2rem;
+      width: 80%;
+      max-width: 800px;
+    }
+
+    #text {
+      width: 100%;
+      min-height: 250px;
+      background: rgba(255, 255, 255, 0.1);
+      color: rgba(19, 18, 18, 0.316);
+      font-size: 20px;
+      line-height: 1.6;
+      border: none;
+      border-radius: 12px;
+      padding: 20px;
+      resize: none;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+      outline: none;
+      transition: 0.3s;
+    }
+
+    #text:focus {
+      background: rgb(255, 255, 255);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    }
+
+    .container {
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    .playButton {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.1);   /* transparent background */
+  backdrop-filter: blur(10px);            /* glass blur */
+  -webkit-backdrop-filter: blur(10px);    /* Safari support */
+  padding: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  transition: 0.3s ease;
+}
+
+.playButton:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 30px rgba(0, 255, 100, 0.6); /* glowing hover */
+}
+
+    .downloadBtn {
+      font-size: 18px;
+      font-weight: bold;
+      border: none;
+      height: 50px;
+      width: 250px;
+      border-radius: 12px;
+      cursor: pointer;
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+      backdrop-filter: blur(10px);           /* blur effect */
+      -webkit-backdrop-filter: blur(10px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+      transition: 0.3s ease;
+    }
+
+    .downloadBtn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 8px 25px rgba(25, 91, 135, 0.6);
+      transform: translateY(-2px);
+    }
+
+    .instruction {
+      display: block;
+      margin-top: 1rem;
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: #f0f0f0;
+      animation: blink 1.5s linear infinite;
+    }
+
+    @keyframes blink {
+      50% { opacity: 0.5; }
+    }
+
+    footer {
+      margin-top: auto;
+      padding: 1rem;
+      font-size: 14px;
+      opacity: 0.7;
+    }

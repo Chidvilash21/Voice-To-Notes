@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Voice To Notes</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <h1>🎙️ Text To Speech</h1>
+  
+  <div id="wrapper">
+    <textarea id="text" placeholder="Your converted speech will appear here..."></textarea>
+  </div>
+
+  <div class="container">
+    <img id="playButton" class="playButton" src="mic.png" alt="Mic Button">
+    <span class="instruction">Click on the mic to start recording</span>
+  </div>
+
+  <div id="downloadSection" style="display:none; margin-top:20px; text-align:center;">
+    <button id="downloadBtn" class="downloadBtn">⬇️ Download PDF</button>
+  </div>
+
+  <footer>
+    Made with ❤️ for easy note-taking
+  </footer>
+
+</body>
+</html>
