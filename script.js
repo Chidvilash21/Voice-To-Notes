@@ -26,6 +26,10 @@ function speechToTextConversion() {
           isRecording = false;
         }
       };
+      recognition.onend = function () {
+  micButton.src = "mic.png";   // Reset back to mic icon
+  isRecording = false;         // Reset state
+};
 
       recognition.onresult = function (event) {
         let transcript = "";
