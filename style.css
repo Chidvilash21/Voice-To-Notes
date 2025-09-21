@@ -108,3 +108,77 @@ body {
       font-size: 14px;
       opacity: 0.7;
     }
+    /* === Luxury Dropdown Styling === */
+.lang-selector {
+  margin-top: 2rem;
+  text-align: center;
+  position: relative;
+}
+
+.lang-selector label {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-right: 12px;
+  color: #f5f5f5;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.3);
+}
+
+#language {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  padding: 14px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 252, 0.4);
+
+  /* Luxury gradient */
+  background: linear-gradient(135deg, rgba(255,255,255,0.12), rgba(0,0,0,0.3));
+  color: #ffffff; /* Gold text */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  box-shadow: 0 8px 25px rgba(0,0,0,0.4), inset 0 0 8px rgba(255,215,0,0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Hover + focus */
+#language:hover, 
+#language:focus {
+  transform: scale(1.06);
+  box-shadow: 0 12px 35px rgba(109, 213, 250, 0.6), 
+              0 0 15px rgba(177, 111, 5, 0.6);
+
+  border-color: rgba(109, 213, 250, 0.9); /* Sky blue border */
+  background: linear-gradient(135deg, rgba(109,213,250,0.2), rgba(177,111,5,0.3));
+  color: #fff;
+}
+
+/* Options inside */
+#language option {
+  background: #1a1a1af9;
+  color: #ffffff;
+  padding: 12px;
+  font-weight: 500;
+}
+
+/* Custom Arrow */
+.lang-selector::after {
+  content: "⯆";
+  font-size: 1rem;
+  color: #ffffff;
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.lang-selector:focus-within::after {
+  transform: translateY(-50%) rotate(180deg);
+  color: #fff;
+}
