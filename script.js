@@ -6,8 +6,9 @@ function speechToTextConversion() {
       }
 
       var recognition = new SpeechRecognition();
+      var languageSelector = document.getElementById('language');
+      
       recognition.continuous = true;
-      recognition.lang = 'en-IN';
       recognition.interimResults = true;
       recognition.maxAlternatives = 1;
 
@@ -17,19 +18,18 @@ function speechToTextConversion() {
 
       micButton.onclick = function () {
         if (!isRecording) {
+          recognition.lang = languageSelector.value; 
           micButton.src = "Recording.png";
           recognition.start();
           isRecording = true;
+          console.log("Recognition started for language:", languageSelector.value);
         } else {
           micButton.src = "mic.png";
           recognition.stop();
           isRecording = false;
+          console.log("Recognition stopped.");
         }
       };
-      recognition.onend = function () {
-  micButton.src = "mic.png";   // Reset back to mic icon
-  isRecording = false;         // Reset state
-};
 
       recognition.onresult = function (event) {
         let transcript = "";
